@@ -1,6 +1,6 @@
 {
   "name": "dharma-v3-deploy-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Hardhat plugin for Dharma V3 deployment",
   "repository": "github:DharmaExchange/dharma-v3-deploy-plugin",
   "license": "MIT",

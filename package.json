@@ -1,8 +1,8 @@
 {
-  "name": "uniswap-v3-deploy-plugin",
+  "name": "dharma-v3-deploy-plugin",
   "version": "0.1.0",
-  "description": "Hardhat plugin for Uniswap V3 deployment",
-  "repository": "github:omarish/uniswap-v3-deploy-plugin",
+  "description": "Hardhat plugin for Dharma V3 deployment",
+  "repository": "github:omarish/dharma-v3-deploy-plugin",
   "author": "Omar Bohsali",
   "license": "MIT",
   "main": "dist/index.js",
@@ -12,7 +12,7 @@
     "smart-contracts",
     "hardhat",
     "hardhat-plugin",
-    "uniswap"
+    "dharma"
   ],
   "scripts": {
     "lint:fix": "prettier --write 'src/**/*.{js,ts}' 'test/**/*.{js,ts}' && tslint --fix --config tslint.json --project tsconfig.json",
@@ -48,8 +48,14 @@
     "hardhat": "^2.0.0"
   },
   "dependencies": {
-    "@uniswap/v3-core": "1.0.0",
-    "@uniswap/v3-periphery": "^1.0.1",
-    "cli-table3": "^0.6.0"
+    "@nomiclabs/hardhat-etherscan": "^2.1.4",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@uniswap/v3-core": "^1.0.0",
+    "@uniswap/v3-periphery": "^1.1.1",
+    "cli-table3": "^0.6.0",
+    "dharma-v3-core": "*",
+    "dharma-v3-periphery": "*",
+    "hardhat-typechain": "^0.3.5",
+    "hardhat-watcher": "^2.1.1"
   }
 }

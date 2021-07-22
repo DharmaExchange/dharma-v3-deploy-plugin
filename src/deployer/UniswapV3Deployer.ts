@@ -12,6 +12,8 @@ const artifacts: { [name: string]: ContractJson } = {
   WETH9,
 };
 
+const WBNBAddress = "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c";
+
 // TODO: Should replace these with the proper typechain output.
 // type INonfungiblePositionManager = Contract;
 // type IUniswapV3Factory = Contract;
@@ -20,7 +22,9 @@ export class UniswapV3Deployer {
   static async deploy(actor: Signer): Promise<{ [name: string]: Contract }> {
     const deployer = new UniswapV3Deployer(actor);
 
-    const weth9 = await deployer.deployWETH9();
+    // const weth9 = await deployer.deployWETH9();
+    const weth9 = new Contract(WBNBAddress, artifacts.WETH9.abi, actor);
+    // const weth9 = await deployer.deployWETH9();
     const factory = await deployer.deployFactory();
     const router = await deployer.deployRouter(factory.address, weth9.address);
     const nftDescriptorLibrary = await deployer.deployNFTDescriptorLibrary();
